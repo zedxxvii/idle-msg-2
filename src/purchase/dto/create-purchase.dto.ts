@@ -8,4 +8,8 @@ export class CreatePurchaseDto {
     @IsNotEmpty()
     @IsString()
     paymentRef: string
+    
+    @IsNotEmpty()
+    @IsString()
+    gameID: string
 }

@@ -14,8 +14,7 @@ export class PurchaseController {
   @UseGuards(JwtAuthGuard)
   async create(@Req() request: any, @Body() createPurchaseDto: CreatePurchaseDto) {
     const user = request.user;
-    return this.purchaseService.create({itemId: createPurchaseDto.itemId, paymentRef: createPurchaseDto.paymentRef }, user.username);
-  }
+    return this.purchaseService.create({itemId: createPurchaseDto.itemId, paymentRef: createPurchaseDto.paymentRef, gameID: createPurchaseDto.gameID}, user.username);  }
 
   @Get()
   @Roles(Role.Admin)

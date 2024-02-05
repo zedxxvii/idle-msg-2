@@ -25,6 +25,7 @@ export class PurchaseService {
       purchase.customer = customer;
       purchase.item = item;
       purchase.isPaid = false;
+      purchase.gameID = createPurchaseDto.gameID;
       purchase.payment_ref = createPurchaseDto.paymentRef;
       const newPuchase = this.purchaseRepository.save(purchase);
       return newPuchase;

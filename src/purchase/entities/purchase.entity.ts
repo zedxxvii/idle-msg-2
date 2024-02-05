@@ -18,6 +18,9 @@ export class Purchase {
     isPaid: boolean;
 
     @Column()
+    gameID: String;
+
+    @Column()
     payment_ref: string;
 
     @CreateDateColumn({ type: "timestamp", default: () => "CURRENT_TIMESTAMP(6)" })
